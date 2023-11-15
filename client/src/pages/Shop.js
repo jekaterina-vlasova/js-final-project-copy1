@@ -21,7 +21,7 @@ const Shop = observer(() => {
     }, [])
 
     useEffect(() => {
-        fetchProducts(product.selectedCategory.id, product.selectedBrand.id, product.page, 4).then(data => {
+        fetchProducts(product.selectedCategory.id, product.selectedBrand.id, product.page, 8).then(data => {
             product.setProducts(data)
             product.setTotalCount(data.count)
         })

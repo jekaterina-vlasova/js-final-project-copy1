@@ -6,7 +6,7 @@ class ProductController {
         try {
             let {category_id, brand_id, limit, page} = req.query;
             page = page || 1;
-            limit = limit || 4;
+            limit = limit || 8;
             const offset = limit * (page - 1);
 
             let whereClause = '';
@@ -19,7 +19,9 @@ class ProductController {
                 whereClause += whereClause ? ` AND category_id = ${category_id}` : `WHERE category_id = ${category_id}`;
             }
 
+ 
             const getAllProductsQuery = `SELECT * FROM product ${whereClause} LIMIT ? OFFSET ?`;
+
             db.query(getAllProductsQuery, [parseInt(limit, 10), parseInt(offset, 10)], (err, results) => {
                 if (err) {
                     return next(ApiErr.badRequest(err.message));
