@@ -2,24 +2,24 @@ import { observer } from "mobx-react-lite";
 import React, { useContext } from "react";
 import { Card, Row } from "react-bootstrap";
 import { Context } from "..";
-import ListGroup from 'react-bootstrap/ListGroup';
+import { Dropdown } from "react-bootstrap";
 
 const BrandBar = observer(() => {
     const {product} = useContext(Context)
 
     return (
-        <ListGroup>
+        <Dropdown>
             {product.brands.map(brand =>
-                <ListGroup.Item 
+                <Dropdown.Item 
                     style={{cursor: "pointer"}}
                     active={brand.id === product.selectedBrand.id}
                     onClick={() =>product.setSelectedBrand(brand)}
                     key={brand.id}
                 >
                     {brand.name}
-                </ListGroup.Item>
+                </Dropdown.Item>
             )}
-        </ListGroup>
+        </Dropdown>
       /*   <Row className="d-flex">
             {product.brands.map(brand =>
                 <Card

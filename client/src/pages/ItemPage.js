@@ -18,10 +18,13 @@ const ItemPage = () => {
         <Container className="mt-5">
             <Row>
                 <Col md={4}>
-                    <Card border="5px solid lightgray">
+                    <Card className="d-flex align-items-center">
                         <Image width={300} height={300} src={process.env.REACT_APP_API_URL + "/" + product.img}/>
                     </Card>
-                    <Card><h2>$ {product.price}</h2></Card>
+                    <Card className="d-flex align-items-center">
+                        <h2>$ {product.price}</h2>
+                        {/* <Button variant={"outline-dark"}>Add to Basket</Button> */}
+                    </Card>
                 </Col>
                 <Col md={4}>
                     <Row className="d-flex flex-column align-items-center">
@@ -38,17 +41,15 @@ const ItemPage = () => {
                     <Card 
                         border="5x solid lightgray"
                         className="d-flex flex-column align-items-center justify-content-around"
-                        style={{width: 300, height: 300, fontSize: 62}}
+                        style={{fontSize: 18}}
                     >
-                        <h1>$ {product.price}</h1>
-                        <Button variant={"outline-dark"}>Add to Basket</Button>
+                        {product.description}
                     </Card>
                 </Col> */}
             </Row>
-            <Row className="d-flex flex-column m-3">
-                {/* <h2>Details</h2> */}
-           
-            </Row>
+            <Col className="d-flex flex-column m-3" style={{fontSize: 18}}>
+                {product.description}
+            </Col>
             <Row>
                 {/* <Col md={2}>
                     <Card className="d-flex"> 

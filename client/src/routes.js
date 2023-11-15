@@ -1,4 +1,5 @@
 // import Admin from "./pages/Admin";
+import TypeBar from "./components/TypeBar";
 import Auth from "./pages/Auth";
 import Basket from "./pages/Basket";
 import ItemPage from "./pages/ItemPage";

@@ -10,9 +10,9 @@ const ItemCard = ({ product }) => {
     console.log(navigate)
     return (
         <Col md={3} className={"mt-3"} onClick={() => navigate(PRODUCT_ROUTE + "/" + product.id)}>
-            <Card style={{width: 150, cursor: "pointer"}} border={"light"}>
+            <Card className="d-flex align-items-center" style={{width: 150, cursor: "pointer"}} border={"light"}>
                 <Image width={300} height={300} src={process.env.REACT_APP_API_URL + "/" + product.img}/>
-                <div className="text-black-50 mt-1 d-flex text-black-50 justify-content-between align-items-center">{product.name}<br/>$ {product.price}
+                <div className="d-flex align-items-center text-black-50 mt-1 text-black-50">{product.name}<br/>$ {product.price}
                 </div>
                     {/* <div>Loreal</div>
                     <div className="d-flex align-items-center">
