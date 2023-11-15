@@ -16,7 +16,7 @@ const Shop = observer(() => {
         fetchBrands().then(data => product.setBrands(data))
         fetchProducts(null, null, 1, 4).then(data => {
             product.setProducts(data)
-            product.setTotalCount(data.amount)
+            product.setTotalCount(data.count)
         })        
     }, [])
 

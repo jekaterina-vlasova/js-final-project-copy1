@@ -6,7 +6,7 @@ class ProductController {
         try {
             let {brandId, typeId, limit, page} = req.query;
             page = page || 1;
-            limit = limit || 8;
+            limit = limit || 4;
             const offset = limit * (page - 1);
 
             let whereClause = '';

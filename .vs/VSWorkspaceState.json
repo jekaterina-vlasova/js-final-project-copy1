@@ -9,7 +9,8 @@
     "\\client\\src\\store",
     "\\server",
     "\\server\\controllers",
-    "\\server\\routers"
+    "\\server\\middleware"
   ],
+  "SelectedNode": "\\client\\src\\components\\ItemCard.js",
   "PreviewInSolutionExplorer": false
 }

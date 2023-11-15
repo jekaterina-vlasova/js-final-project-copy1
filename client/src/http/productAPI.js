@@ -16,14 +16,14 @@ export const fetchBrands = async () => {
     return data
 }
 
-export const fetchProducts= async (categoryId, brandId, page, limit = 5) => {
+export const fetchProducts = async (categoryId, brandId, page, limit = 4) => {
     const {data} = await $host.get('api/product', {params: {
         categoryId, brandId, page, limit
     }})
     return data
 }
 
-export const fetchOneProduct= async (id) => {
+export const fetchOneProduct = async (id) => {
     const {data} = await $host.get('api/product/' + id)
     return data
 }
