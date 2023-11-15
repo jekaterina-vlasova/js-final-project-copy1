@@ -1,16 +1,21 @@
 import React, {useContext} from 'react';
 import {observer} from "mobx-react-lite";
-import {Context} from "../index";
+import {Context} from "..";
 import {Pagination} from "react-bootstrap";
 
 const Pages = observer(() => {
     const {product} = useContext(Context)
+    console.log(product.totalCount);
+    console.log(product.limit);
     const pageCount = Math.ceil(product.totalCount / product.limit)
+    console.log(pageCount);
     const pages = []
 
     for (let i = 0; i < pageCount; i++) {
         pages.push(i + 1)
     }
+
+    console.log(pages);
 
     return (
         <Pagination className="mt-3">
@@ -26,5 +31,6 @@ const Pages = observer(() => {
         </Pagination>
     );
 });
+
 
 export default Pages;

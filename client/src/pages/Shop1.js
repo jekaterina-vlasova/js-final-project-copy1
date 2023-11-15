@@ -9,7 +9,7 @@ import { fetchBrands, fetchCategories, fetchProducts } from "../http/productAPI"
 import Pages from "../components/Pages";
 
 const Shop = observer(() => {
-    const { product } = useContext(Context)
+    const {product} = useContext(Context)
 
     useEffect(() => {
         fetchCategories().then(data => product.setCategories(data))
@@ -17,11 +17,11 @@ const Shop = observer(() => {
         fetchProducts(null, null, 1, 4).then(data => {
             product.setProducts(data)
             product.setTotalCount(data.count)
-        })
+        })        
     }, [])
 
     useEffect(() => {
-        fetchProducts(product.selectedCategory.id, product.selectedBrand.id, product.page, 4).then(data => {
+        fetchProducts(product.selectedCategory.category_id, product.selectedBrand.brand_id, product.page, 4).then(data => {
             product.setProducts(data)
             product.setTotalCount(data.count)
         })
@@ -29,11 +29,19 @@ const Shop = observer(() => {
 
     return (
         <Container>
-            
-            <ItemList />
+            {/* <Row className="mt-2"> */}
+                <ItemList/>
 
-           
-            <Pages />
+                {/* <Col md={3}>
+                    <TypeBar/>
+                </Col>
+                <Col md={9}>
+                    <BrandBar/>
+                    <ItemList/>
+                    <Pages/>
+                </Col> */}
+            {/* </Row> */}
+            <Pages/>
         </Container>
     );
 });

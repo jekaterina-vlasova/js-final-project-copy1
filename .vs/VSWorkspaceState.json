@@ -3,14 +3,14 @@
     "",
     "\\client",
     "\\client\\src",
-    "\\client\\src\\components",
-    "\\client\\src\\http",
     "\\client\\src\\pages",
     "\\client\\src\\store",
     "\\server",
     "\\server\\controllers",
-    "\\server\\middleware"
+    "\\server\\error",
+    "\\server\\middleware",
+    "\\server\\routers"
   ],
-  "SelectedNode": "\\client\\src\\components\\ItemCard.js",
+  "SelectedNode": "\\client\\src\\components\\Pages.js",
   "PreviewInSolutionExplorer": false
 }

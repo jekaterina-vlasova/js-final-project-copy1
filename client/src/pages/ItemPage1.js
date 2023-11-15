@@ -19,7 +19,7 @@ const ItemPage = () => {
             <Row>
                 <Col md={4}>
                     <Card border="5px solid lightgray">
-                        <Image width={300} height={300} src={process.env.REACT_APP_API_URL + "/" + product.img}/>
+                        <Image width={300} height={300} src={process.env.REACT_APP_API_URL + product.img}/>
                     </Card>
                     <Card><h2>$ {product.price}</h2></Card>
                 </Col>
@@ -47,7 +47,11 @@ const ItemPage = () => {
             </Row>
             <Row className="d-flex flex-column m-3">
                 {/* <h2>Details</h2> */}
-           
+                {product.info.map((info, index) =>
+                    <Row key={info.id} style={{background: index % 2 === 0 ? "lightgray" : "transparent", padding: 10}}>
+                        {info.name}: {info.description}
+                    </Row>
+                )}
             </Row>
             <Row>
                 {/* <Col md={2}>
