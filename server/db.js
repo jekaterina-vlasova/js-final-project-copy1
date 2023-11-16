@@ -8,14 +8,6 @@ const connection = mysql.createConnection({
     database: "online_hair",
 });
 
-/*db.connect((err) => {
-    if (err) {
-        console.error("Error connecting to the database: ", err);
-    } else {
-        console.log("Connected to the database");
-      }
-});*/
-
 connection.connect((error) => {
     if (error)
         throw error;

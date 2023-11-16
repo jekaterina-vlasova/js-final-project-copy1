@@ -2,40 +2,6 @@ const ApiErr = require('../error/ApiErr');
 const db = require('../db');
 
 class ProductController {
-    /*async getAll(req, res, next) {
-        try {
-            let {category_id, brand_id, limit, page} = req.query;
-            page = page || 1;
-            limit = limit || 8;
-            const offset = limit * (page - 1);
-
-            let whereClause = '';
-
-            if (brand_id) {
-                whereClause = `WHERE brand_id = ${brand_id}`;
-            }
-
-            if (category_id) {
-                whereClause += whereClause ? ` AND category_id = ${category_id}` : `WHERE category_id = ${category_id}`;
-            }
-
- 
-            const getAllProductsQuery = `SELECT * FROM product ${whereClause} LIMIT ? OFFSET ?`;
-
-            db.query(getAllProductsQuery, [parseInt(limit, 10), parseInt(offset, 10)], (err, results) => {
-                if (err) {
-                    return next(ApiErr.badRequest(err.message));
-                }
-
-                const products = results;
-
-                return res.json(products);
-            });
-        } catch (err) {
-            next(err); // Forward any unhandled errors to the error-handling middleware
-        }
-    }*/
-
     async getAll(req, res, next) {
         try {
             let {category_id, brand_id, limit, page} = req.query;
