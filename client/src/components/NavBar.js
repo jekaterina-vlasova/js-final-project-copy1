@@ -23,14 +23,14 @@ const NavBar = observer(() => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <NavLink className="navbar-brand mr-4" style={{color: "black"}} to={SHOP_ROUTE}>HairAdore</NavLink>
+                <NavLink className="navbar-brand mr-4" style={{color: "black", fontSize: "24px", fontWeight: "bold", textDecoration: "none"}} to={SHOP_ROUTE}>HairAdore</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse>
                     <Nav className="me-auto">
-                        <NavDropdown title="Brands">
+                        <NavDropdown title="Brands" style={{ marginRight: '10px', marginLeft: '10px', fontWeight: "bold" }}>
                             <BrandBar/>
                         </NavDropdown>
-                        <NavDropdown title="Categories">
+                        <NavDropdown title="Categories" style={{fontWeight: "bold"}}>
                             <TypeBar/>
                         </NavDropdown>
                     </Nav>
