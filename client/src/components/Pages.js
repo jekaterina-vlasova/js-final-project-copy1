@@ -7,16 +7,15 @@ const Pages = observer(() => {
     const {product} = useContext(Context)
     console.log(product.totalCount);
     console.log(product.limit);
-    //const pageCount = Math.ceil(product.totalCount / product.limit)
-    const pageCount = 6;
+    const pageCount = Math.ceil(product.totalCount / product.limit)
     console.log(pageCount);
-    const pages = [1, 2, 3, 4, 5, 6]
+    const pages = []
 
-    /*for (let i = 0; i < pageCount; i++) {
+    for (let i = 0; i < pageCount; i++) {
         pages.push(i + 1)
-    }*/
+    }
 
-    console.log(pages);
+   
 
     return (
         <Pagination className="mt-3">

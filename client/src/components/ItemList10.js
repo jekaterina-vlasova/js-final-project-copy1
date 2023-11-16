@@ -7,18 +7,22 @@ import { toJS } from "mobx";
 
 const ItemList = observer(() => {
     const { product } = useContext(Context);
-    console.log(product)
 
-    // Convert the observable array to a regular array
-    const products = toJS(product.products) || [];
-    console.log(products.count)
+    // Destructure products and count from the product store
+    const { products, count } = product;
+
+    // Convert the observable array to a regular array or default to an empty array
+    const productsArray = Array.isArray(products) ? toJS(products) : [];
 
     return (
-        <Row className="d-flex">
-            {products.map((product) => (
-                <ItemCard key={product.id} product={product}/>
-            ))}
-        </Row>
+        <div>
+            <Row className="d-flex">
+                {productsArray.map((product) => (
+                    <ItemCard key={product.id} product={product} />
+                ))}
+            </Row>
+            <p>Total Count: {count}</p>
+        </div>
     );
 });
 
