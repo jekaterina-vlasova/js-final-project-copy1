@@ -40,7 +40,7 @@ const Auth = observer(() => {
             </Row>
             <Row 
                 className="d-flex justify-content-center align-items-center"
-                style={{height: window.innerHeight - 54}}
+                style={{ height: "100%" }}
             >
                 <Card style={{width: 600}} className="p-5">
                     <h2 className="m-auto">{isLogin ? "Sign In" : "Registration"}</h2>

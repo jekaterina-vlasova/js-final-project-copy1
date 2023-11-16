@@ -1,5 +1,4 @@
 import { $authHost, $host } from ".";
-import { jwtDecode } from "jwt-decode";
 
 export const fetchCategories = async () => {
     const {data} = await $host.get('api/category')

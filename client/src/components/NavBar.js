@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink, useNavigate } from "react-router-dom";
-import { BASKET_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts";
+import { LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 import TypeBar from "../components/TypeBar";
@@ -36,7 +36,6 @@ const NavBar = observer(() => {
                     </Nav>
                     {client.isAuth ?
                         <Nav className="ml-auto">
-                            {/* <NavLink className="navbar-text ml-2" to={BASKET_ROUTE}>Basket</NavLink> */}
                             <Button 
                                 variant={"outline-dark"} 
                                 onClick={() => logOut()} 
@@ -47,7 +46,6 @@ const NavBar = observer(() => {
                         </Nav>
                         :
                         <Nav className="ml-auto">
-                            {/* <NavLink to={SHOP_ROUTE}>Basket</NavLink> */}
                             <Button 
                                 variant={"outline-dark"} 
                                 onClick={() => navigate(LOGIN_ROUTE)}

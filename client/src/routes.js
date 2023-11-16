@@ -1,10 +1,8 @@
-// import Admin from "./pages/Admin";
-import TypeBar from "./components/TypeBar";
 import Auth from "./pages/Auth";
 import Basket from "./pages/Basket";
 import ItemPage from "./pages/ItemPage";
 import Shop from "./pages/Shop";
-import { ADMIN_ROUTE, BASKET_ROUTE, PRODUCT_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "./utils/consts";
+import { BASKET_ROUTE, PRODUCT_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "./utils/consts";
 
 export const authRoutes = [
     {

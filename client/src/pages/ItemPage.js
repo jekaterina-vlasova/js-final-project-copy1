@@ -1,8 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Image, Row } from "react-bootstrap";
 import bigStar from "../assets/bigStar.png";
-import { Button } from "react-bootstrap";
-import { Context } from "..";
 import { useParams } from "react-router-dom";
 import { fetchOneProduct } from "../http/productAPI";
 import hair_background_1 from "../assets/hair_background_1.jpg"

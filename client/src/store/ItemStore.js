@@ -48,9 +48,7 @@ export default class ItemStore {
     get products() {
         return this._products
     }
-    // get basket() {
-    //     return this._baskets
-    // }
+
     get selectedCategory() {
         return this._selectedCategory
     }
