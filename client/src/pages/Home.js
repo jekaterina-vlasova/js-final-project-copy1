@@ -8,20 +8,20 @@ import { Context } from "..";
 import { fetchBrands, fetchCategories, fetchProducts } from "../http/productAPI";
 import Pages from "../components/Pages";
 
-const Shop = observer(() => {
+const Home = observer(() => {
     const { product } = useContext(Context)
 
     useEffect(() => {
         fetchCategories().then(data => product.setCategories(data))
         fetchBrands().then(data => product.setBrands(data))
-        fetchProducts(null, null, 1, 8).then(data => {
+        fetchProducts(null, null, 1, 4).then(data => {
             product.setProducts(data)
             product.setTotalCount(data.count)
         })
     }, [])
 
     useEffect(() => {
-        fetchProducts(product.selectedCategory.id, product.selectedBrand.id, product.page, 8).then(data => {
+        fetchProducts(product.selectedCategory.id, product.selectedBrand.id, product.page, 4).then(data => {
             product.setProducts(data)
             product.setTotalCount(data.count)
         })
@@ -32,10 +32,10 @@ const Shop = observer(() => {
             
             <ItemList />
 
-         
+           
             <Pages />
         </Container>
     );
 });
 
-export default Shop;
+export default Home;

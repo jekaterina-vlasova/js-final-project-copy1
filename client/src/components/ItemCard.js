@@ -9,9 +9,9 @@ const ItemCard = ({ product }) => {
     const navigate = useNavigate()
     console.log(navigate)
     return (
-        <Col md={3} className={"mt-3"} onClick={() => navigate(PRODUCT_ROUTE + "/" + product.id)}>
-            <Card className="d-flex align-items-center" style={{width: 150, cursor: "pointer"}} border={"light"}>
-                <Image width={300} height={300} src={process.env.REACT_APP_API_URL + "/" + product.img}/>
+        <Col md={3} className={"mt-5"} onClick={() => navigate(PRODUCT_ROUTE + "/" + product.id)}>
+            <Card className="d-flex align-items-center border-0" style={{width: 150, cursor: "pointer"}} border={"light"}>
+                <Image width={250} height={250} src={process.env.REACT_APP_API_URL + "/" + product.img}/>
                 <div className="d-flex align-items-center text-black-50 mt-1 text-black-50">{product.name}<br/>$ {product.price}
                 </div>
                     {/* <div>Loreal</div>

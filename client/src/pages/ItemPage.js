@@ -15,13 +15,13 @@ const ItemPage = () => {
     }, [])
     
     return (
-        <Container className="mt-5">
+        <Container className={"mt-5"}>
             <Row>
                 <Col md={4}>
-                    <Card className="d-flex align-items-center">
+                    <Card className="d-flex align-items-center border-0">
                         <Image width={300} height={300} src={process.env.REACT_APP_API_URL + "/" + product.img}/>
                     </Card>
-                    <Card className="d-flex align-items-center">
+                    <Card className="d-flex align-items-center border-0">
                         <h2>$ {product.price}</h2>
                         {/* <Button variant={"outline-dark"}>Add to Basket</Button> */}
                     </Card>
