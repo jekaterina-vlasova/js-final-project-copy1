@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\client",
+    "\\client\\public",
     "\\client\\src",
-    "\\client\\src\\pages",
-    "\\client\\src\\store",
+    "\\client\\src\\assets",
+    "\\client\\src\\components",
+    "\\client\\src\\http",
     "\\server",
     "\\server\\controllers",
-    "\\server\\error",
-    "\\server\\middleware",
     "\\server\\routers"
   ],
-  "SelectedNode": "\\client\\src\\pages\\Shop.js",
+  "SelectedNode": "\\client\\src\\store\\ItemStore.js",
   "PreviewInSolutionExplorer": false
 }

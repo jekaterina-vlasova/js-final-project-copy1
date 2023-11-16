@@ -6,7 +6,6 @@ import { Row } from "react-bootstrap";
 
 const ItemList = observer(() => {
     const { product } = useContext(Context)
-    console.log(product);
     return (
         <Row className = "d-flex">
             {product.products.map(product =>

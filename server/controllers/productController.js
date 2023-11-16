@@ -2,7 +2,7 @@ const ApiErr = require('../error/ApiErr');
 const db = require('../db');
 
 class ProductController {
-    async getAll(req, res, next) {
+    /*async getAll(req, res, next) {
         try {
             let {category_id, brand_id, limit, page} = req.query;
             page = page || 1;
@@ -34,9 +34,9 @@ class ProductController {
         } catch (err) {
             next(err); // Forward any unhandled errors to the error-handling middleware
         }
-    }
+    }*/
 
-    /*async getAll(req, res, next) {
+    async getAll(req, res, next) {
         try {
             let {category_id, brand_id, limit, page} = req.query;
             page = page || 1;
@@ -70,13 +70,15 @@ class ProductController {
 
                     const products = results;
 
+                    
+
                     return res.json({ products, count: totalCount });
                 });
             });
         } catch (err) {
             next(err);
         }
-    }*/
+    }
 
 
     async getOne(req, res, next) {
