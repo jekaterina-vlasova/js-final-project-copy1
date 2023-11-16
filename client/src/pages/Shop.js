@@ -14,7 +14,7 @@ const Shop = observer(() => {
     useEffect(() => {
         fetchCategories().then(data => product.setCategories(data))
         fetchBrands().then(data => product.setBrands(data))
-        fetchProducts(null, null, 1, 4).then(data => {
+        fetchProducts(null, null, 1, 8).then(data => {
             product.setProducts(data)
             product.setTotalCount(data.count)
         })
